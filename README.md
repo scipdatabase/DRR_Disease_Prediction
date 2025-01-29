@@ -31,6 +31,9 @@ Ensure you have **Python (version: 3.9.16)** installed. The following packages a
 - **Keras** (version: 2.10.0)
 - **Pandas**
 - **NumPy**
+- **Tensorflow-addons** (version 0.22.0)
+- **openpyxl**
+- **xlsxwriter**
 
 Install the dependencies using:
 ```bash
@@ -47,7 +50,7 @@ pip install tensorflow==2.10.1 keras==2.10.0 pandas numpy
 ---
 
 ## Models
-### Available Models for Classification and Scoring
+### Available Models for Classification
 | MODEL                        | Camera         | Root Scanner   | Microscope      |
 |------------------------------|----------------|----------------|-----------------|
 | **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR**       | Control, DRR   | Control, DRR   | Control, DRR    |
@@ -57,6 +60,17 @@ pip install tensorflow==2.10.1 keras==2.10.0 pandas numpy
 | **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR**      | X              | Control, DRR   | X               |
 | **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR**      | X              | X              | Control, DRR    |
 | **DRR_single_task_1R_200e** | X              | X              | X               |
+
+### Available Models for Scoring
+| MODEL                        | Camera         | Root Scanner   | Microscope      |
+|------------------------------|----------------|----------------|-----------------|
+| **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR**       | 0 - 5   | 0 - 5   | 0 - 5    |
+| **new_2cls_7cls_trained_ViT_E_7_eps_200_bs_32_onlyControlDRR**     | 0 - 5   | 0 - 5   | 0 - 5   |
+| **new_DRR_MTL_3c_1R_200e_32BS**  | 0 - 6 | 0 - 6 | 0 - 6 |
+| **DRR_MTL_3c_1R_500e**  | 0 - 6 | 0 - 6 | 0 - 6 |
+| **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR**      | X              | 0 - 5   | X               |
+| **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR**      | X              | X              | 0 - 5    |
+| **DRR_single_task_1R_200e** | 0 - 6              | X              | 0 - 6               |
 
 ---
 
