@@ -1,5 +1,22 @@
 # DRR Disease Classification and Scoring Model
-
+## Introduction
+Dry Root Rot (DRR), caused by the fungal pathogen Macrophomina phaseolina,
+emerging as a global disease in chickpea leading to a significant yield loss and is
+worsened by drought conditions. Disease symptoms include brittle tap root, brown to
+black lesions on the roots, progressing to decay and devoid of lateral roots.
+Development of resistant cultivars and accurate assessment and identification of the
+disease is an important management strategy to overcome the disease. Various
+evaluation techniques including sick plot, sick pot and blotting paper technique are
+used to identify resistant cultivar and to the study the disease expression in
+chickpea. Among these methods, blotting paper technique stands out as a high-
+throughput technique for screening a large number of genotypes in a short span of
+time. However, the manual method of disease scoring followed for disease
+assessment is inaccurate, subjective to individual and prone to bias. Therefore, there
+is a pressing need for improving the accuracy through recent advancements in deep
+learning for augmentation and automation of images analysis for disease prediction.
+Here, we used two different architectures Xception and ViT to develop a deep
+learning model for early, non-invasive detection of DRR in chickpeas, providing a
+valuable tool for high-throughput
 ## Overview
 This model classifies chickpea root images captured by cameras, root scanners, and microscopes into the following categories:
 - **Control (Healthy)**
