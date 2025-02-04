@@ -26,7 +26,6 @@ This model classifies chickpea root images captured by cameras, root scanners, a
 Additionally, it scores DRR images on a scale of **1 to 5**.
 
 
-```
 
 ### Download Code as ZIP:
 1. Look for the green "Code" button on the repository page.
