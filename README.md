@@ -26,24 +26,48 @@ This model classifies chickpea root images captured by cameras, root scanners, a
 Additionally, it scores DRR images on a scale of **1 to 5**.
 
 
+---
 
-### Download Code as ZIP:
-1. Look for the green "Code" button on the repository page.
-2. Click on the "Code" button.
-3. Select "Download ZIP" from the dropdown.
-4. Save and extract the ZIP file to access the code.
+###  Clone the Entire Repository
+
+
+#### 🛠 Requirements:
+- [Git](https://git-scm.com/)
+- [Git LFS](https://git-lfs.github.com/)
+
+Download **all models, scripts, and folders**:
+
+```bash
+git clone https://github.com/scipdatabase/DRR_Disease_Prediction.git
+cd DRR_Disease_Prediction
+git lfs install
+git lfs pull
+```
 
 ---
 
+Download a particular model
+```bash
+Install git and gitlfs and run the following code in gitbash
+clone --filter=blob:none --no-checkout https://github.com/scipdatabase/DRR_Disease_Prediction.git DRR_Disease_Prediction_new
+cd DRR_Disease_Prediction_new
+
+git sparse-checkout init --cone
+git sparse-checkout set new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR (replace with your desired model name)
+
+git checkout main
+git lfs pull
+```
+---
+
 ## Required Packages
-Ensure you have **Python (version: 3.9.16)** installed. The following packages are required:
-- **TensorFlow** (version: 2.10.1)
+Ensure you have **Python (version: 3.8.2)** installed. The following packages are required:
+- **TensorFlow** (version: 2.10.0)
 - **Keras** (version: 2.10.0)
-- **Pandas**
-- **NumPy**
-- **Tensorflow-addons** (version 0.22.0)
+- **Pandas** (version: 1.3.5)
+- **NumPy** (version: 1.21.6)
+- **Tensorflow-addons** (version 0.21.0)
 - **openpyxl**
-- **xlsxwriter**
 
 Install the dependencies using:
 ```bash
