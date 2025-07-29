@@ -69,10 +69,6 @@ Ensure you have **Python (version: 3.8.2)** installed. The following packages ar
 - **Tensorflow-addons** (version 0.21.0)
 - **openpyxl**
 
-Install the dependencies using:
-```bash
-pip install tensorflow==2.10.1 keras==2.10.0 pandas numpy
-```
 
 ---
 
