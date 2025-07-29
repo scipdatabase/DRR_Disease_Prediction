@@ -31,7 +31,7 @@ Additionally, it scores DRR images on a scale of **1 to 5**.
 ###  Clone the Entire Repository
 
 
-#### 🛠 Requirements:
+#### Requirements:
 - [Git](https://git-scm.com/)
 - [Git LFS](https://git-lfs.github.com/)
 
