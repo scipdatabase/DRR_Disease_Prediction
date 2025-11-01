@@ -81,48 +81,50 @@ Ensure you have **Python (version: 3.8.2)** installed. The following packages ar
 
 ## Models
 ### Available Models for Classification
-| MODEL                        | Camera         | Root Scanner   | Microscope      |
-|------------------------------|----------------|----------------|-----------------|
-| **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR**       | Control, DRR   | Control, DRR   | Control, DRR    |
-| **new_2cls_7cls_trained_ViT_E_7_eps_200_bs_32_onlyControlDRR**     | Control, DRR   | Control, DRR   | Control, DRR    |
-| **new_DRR_MTL_3c_1R_200e_32BS**  | Control, DRR + Non DRR | Control, DRR + Non DRR | Control, DRR + Non DRR |
-| **DRR_MTL_3c_1R_500e**  | Control, DRR, Non DRR  | Control, DRR, Non DRR  | Control, DRR, Non DRR  |
-| **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR**      | X              | Control, DRR   | X               |
-| **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR**      | X              | X              | Control, DRR    |
-| **DRR_single_task_1R_200e** | X              | X              | X               |
+| S.No | Model               | Dataset | Model File                                               | Camera                 | Root Scanner            | Microscope             |
+|:----:|---------------------|:--------:|----------------------------------------------------------|------------------------|-------------------------|------------------------|
+| 1 | ViT MTL 2Cls 1R | E | **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR** | Control, DRR | Control, DRR | Control, DRR |
+| 2 | ViT MTL 2Cls 6Cls | E | **new_2cls_7cls_trained_ViT_E_7_eps_200_bs_32_onlyControlDRR** | Control, DRR | Control, DRR | Control, DRR |
+| 3 | Xception MTL 2Cls 1R | E | **new_DRR_MTL_3c_1R_200e_32BS** | Control, DRR + Non DRR | Control, DRR + Non DRR | Control, DRR + Non DRR |
+| 4 | Xception MTL 3Cls 1R | E | **DRR_MTL_3c_1R_500e** | Control, DRR, Non DRR | Control, DRR, Non DRR | Control, DRR, Non DRR |
+| 5 | ViT MTL 2Cls 1R | A2 | **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR** | X | Control, DRR | X |
+| 6 | ViT MTL 2Cls 1R | A3 | **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR** | X | X | Control, DRR |
+| 7 | Xception STL 1R | D | **DRR_single_task_1R_200e** | X | X | X |
+
+---
 
 ### Available Models for Scoring
-| MODEL                        | Camera         | Root Scanner   | Microscope      |
-|------------------------------|----------------|----------------|-----------------|
-| **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR**       | 0 - 5   | 0 - 5   | 0 - 5    |
-| **new_2cls_7cls_trained_ViT_E_7_eps_200_bs_32_onlyControlDRR**     | 0 - 5   | 0 - 5   | 0 - 5   |
-| **new_DRR_MTL_3c_1R_200e_32BS**  | 0 - 6 | 0 - 6 | 0 - 6 |
-| **DRR_MTL_3c_1R_500e**  | 0 - 6 | 0 - 6 | 0 - 6 |
-| **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR**      | X              | 0 - 5   | X               |
-| **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR**      | X              | X              | 0 - 5    |
-| **DRR_single_task_1R_200e** | 0 - 6              | X              | 0 - 6               |
+| S.No | Model | Dataset | Model File | Camera | Root Scanner | Microscope |
+|:----:|--------|:--------:|-------------|:--------:|:--------------:|:-------------:|
+| 1 | ViT MTL 2Cls 1R | E | **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR** | 0–5 | 0–5 | 0–5 |
+| 2 | ViT MTL 2Cls 6Cls | E | **new_2cls_7cls_trained_ViT_E_7_eps_200_bs_32_onlyControlDRR** | 0–5 | 0–5 | 0–5 |
+| 3 | Xception MTL 2Cls 1R | E | **new_DRR_MTL_3c_1R_200e_32BS** | 0–6 | 0–6 | 0–6 |
+| 4 | Xception MTL 3Cls 1R | E | **DRR_MTL_3c_1R_500e** | 0–6 | 0–6 | 0–6 |
+| 5 | ViT MTL 2Cls 1R | A2 | **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR** | X | 0–5 | X |
+| 6 | ViT MTL 2Cls 1R | A3 | **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR** | X | X | 0–5 |
+| 7 | Xception STL 1R | D | **DRR_single_task_1R_200e** | 0–6 | X | 0–6 |
 
 ---
 
 ### Python Script for Each Model
-| MODEL                        | CODE           |
-|------------------------------|----------------|
-| **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR**       | ViT 2C-1R      |
-| **new_2cls_7cls_trained_ViT_E_7_eps_200_bs_32_onlyControlDRR**     | ViT 2C-7C      |
-| **new_DRR_MTL_3c_1R_200e_32BS**  | Xception 2C-1R |
-| **DRR_MTL_3c_1R_500e**  | Xception 3C-1R |
-| **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR**      | ViT 2C-1R      |
-| **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR**      | ViT 2C-1R      |
-| **DRR_single_task_1R_200e** | Xception 1R   |
+| S.No | Model | Dataset | Model File | Code |
+|:----:|--------|:--------:|-------------|:------:|
+| 1 | ViT MTL 2Cls 1R | E | **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR** | ViT 2C-1R |
+| 2 | ViT MTL 2Cls 6Cls | E | **new_2cls_7cls_trained_ViT_E_7_eps_200_bs_32_onlyControlDRR** | ViT 2C-7C |
+| 3 | Xception MTL 2Cls 1R | E | **new_DRR_MTL_3c_1R_200e_32BS** | Xception 2C-1R |
+| 4 | Xception MTL 3Cls 1R | E | **DRR_MTL_3c_1R_500e** | Xception 3C-1R |
+| 5 | ViT MTL 2Cls 1R | A2 | **new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR** | ViT 2C-1R |
+| 6 | ViT MTL 2Cls 1R | A3 | **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR** | ViT 2C-1R |
+| 7 | Xception STL 1R | D | **DRR_single_task_1R_200e** | Xception 1R |
 
----
 
 ### Recommended Models
-| Image Type      | Recommended Model          |
-|-----------------|----------------------------|
-| **Camera**      | new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR        |
-| **Root Scanner**| new_2cls_1R_trained_ViT_A2_eps_200_bs_32_onlyControlDRR    |
-| **Microscope**  | new_DRR_MTL_3c_1R_200e_32BS   |
+| Image Type      | Model               | Dataset | Model File |
+|:----------------|:--------------------|:--------:|:------------|
+| **Camera**      | ViT MTL 2Cls 1R     | E  | **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR** |
+| **Root Scanner**| ViT MTL 2Cls 1R     | E | **new_2cls_1R_trained_ViT_E_7_eps_500_bs_32_onlyControlDRR**|
+| **Microscope**  | ViT MTL 2Cls 1R     | A3 | **new_2cls_1R_trained_ViT_A3_eps_200_bs_32_onlyControlDRR** |
+
 
 ---
 
