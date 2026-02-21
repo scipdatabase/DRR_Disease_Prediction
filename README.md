@@ -25,10 +25,16 @@ This model classifies chickpea root images captured by cameras, root scanners, a
 
 Additionally, it scores DRR images on a scale of **1 to 5**.
 
+---
+
+## Image Dataset 
+A total of 10,800 images were collected from the chickpea core collection (n=500). The chickpea core collection is a representative subset of global germplasm, established based on geographical origin and 13 quantitative traits to captures over 80% of diversity found in the entire collection. The collection used in this study is housed and maintained at the Genbank, International Crops Research Institute for the Semi-Arid Tropics, Patancheru, India (https://genebank.icrisat.org/IND/Core?Crop=Chickpea). Our study, utilized the mini-core collection (https://db.nipgr.ac.in/cdpdb/Germplasm.php) which is a further refined subset of the core collection, supplemented with additional accessions from the core collection (https://genebank.icrisat.org/IND/Core?Crop=Chickpea).
+
+
 
 ---
 
-###  Clone the Entire Repository
+##  Clone the Repository
 
 
 #### Requirements:
