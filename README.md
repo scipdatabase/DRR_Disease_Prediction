@@ -1,4 +1,4 @@
-# DRR Disease Classification and Scoring Model
+# DRR Disease Classification and Scoring Model (RootRotAI 2.0)
 ## Introduction
 Dry Root Rot (DRR), caused by the fungal pathogen Macrophomina phaseolina,
 emerging as a global disease in chickpea leading to a significant yield loss and is
